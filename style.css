@@ -1,0 +1,311 @@
+:Root {
+    --Bg:#e9c3de;
+    --Header:#Fbf4f6;
+    --Text:#08080b;
+    --White:#Ffffff;
+    --Light-Grey:#C4cad3;
+    --Tag-1:#88bad6;
+    --Tag-1-Text:#2e87ba;
+    --Tag-2:#D6ede2;
+    --Tag-2-Text:#13854e;
+    --Tag-3:#Ceecfd;
+    --Tag-3-Text:#2d86ba;
+    --Tag-4:#F2dcf5;
+    --Tag-4-Text:#A734ba;
+    --Purple:#7784ee;
+  }
+  
+  * {
+    Margin: 0;
+    Padding: 0;
+    Box-Sizing: Border-Box;
+    Font-Family: "Poppins", Sans-Serif;
+  }
+  
+  Body {
+    Color: Var(--Text);
+  }
+  
+  .App {
+    Background-Color: Var(--Bg);
+    Width: 100%;
+    Min-Height: 100vh;
+  }
+  
+  H1 {
+    Font-Size: 30px;
+  }
+  
+  .Project {
+    Padding: 2rem;
+    Max-Width: 75%;
+    Width: 100%;
+    Display: Inline-Block;
+  }
+  .Project-Info {
+    Padding: 2rem 0;
+    Display: Flex;
+    Width: 100%;
+    Justify-Content: Space-Between;
+    Align-Items: Center;
+  }
+  .Project-Participants {
+    Display: Flex;
+    Align-Items: Center;
+  }
+  .Project-Participants Span, .Project-Participants__add {
+    Width: 30px;
+    Height: 30px;
+    Display: Inline-Block;
+    Background: Var(--Purple);
+    Border-Radius: 100rem;
+    Margin: 0 0.2rem;
+  }
+  .Project-Participants__add {
+    Background: Transparent;
+    Border: 1px Dashed Rgb(150, 150, 150);
+    Font-Size: 0;
+    Cursor: Pointer;
+    Position: Relative;
+  }
+  .Project-Participants__add:after {
+    Content: "+";
+    Font-Size: 15px;
+    Color: Rgb(150, 150, 150);
+  }
+  .Project-Tasks {
+    Display: Grid;
+    Grid-Template-Columns: Repeat(4, 1fr);
+    Width: 100%;
+    Grid-Column-Gap: 1.5rem;
+  }
+  .Project-Column-Heading {
+    Margin-Bottom: 1rem;
+    Display: Flex;
+    Align-Items: Center;
+    Justify-Content: Space-Between;
+  }
+  .Project-Column-Heading__title {
+    Font-Size: 20px;
+  }
+  .Project-Column-Heading__options {
+    Background: Transparent;
+    Color: Var(--Light-Grey);
+    Font-Size: 18px;
+    Border: 0;
+    Cursor: Pointer;
+  }
+  
+  .Task {
+    Cursor: Move;
+    Background-Color: Var(--White);
+    Padding: 1rem;
+    Border-Radius: 8px;
+    Width: 100%;
+    Box-Shadow: Rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+    Margin-Bottom: 1rem;
+    Border: 3px Dashed Transparent;
+  }
+  .Task:hover {
+    Box-Shadow: Rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+    Border-Color: Rgba(162, 179, 207, 0.2) !Important;
+  }
+  .Task P {
+    Font-Size: 15px;
+    Margin: 1.2rem 0;
+  }
+  .Task__tag {
+    Border-Radius: 100px;
+    Padding: 2px 13px;
+    Font-Size: 12px;
+  }
+  .Task__tag--Copyright {
+    Color: Var(--Tag-4-Text);
+    Background-Color: Var(--Tag-4);
+  }
+  .Task__tag--Design {
+    Color: Var(--Tag-3-Text);
+    Background-Color: Var(--Tag-3);
+  }
+  .Task__tag--Illustration {
+    Color: Var(--Tag-2-Text);
+    Background-Color: Var(--Tag-2);
+  }
+  .Task__tags {
+    Width: 100%;
+    Display: Flex;
+    Align-Items: Center;
+    Justify-Content: Space-Between;
+  }
+  .Task__options {
+    Background: Transparent;
+    Border: 0;
+    Color: Var(--Light-Grey);
+    Font-Size: 17px;
+  }
+  .Task__stats {
+    Position: Relative;
+    Width: 100%;
+    Color: Var(--Light-Grey);
+    Font-Size: 12px;
+  }
+  .Task__stats Span:not(:Last-Of-Type) {
+    Margin-Right: 1rem;
+  }
+  .Task__stats Svg {
+    Margin-Right: 5px;
+  }
+  .Task__owner {
+    Width: 25px;
+    Height: 25px;
+    Border-Radius: 100rem;
+    Background: Var(--Purple);
+    Position: Absolute;
+    Display: Inline-Block;
+    Right: 0;
+    Bottom: 0;
+  }
+  
+  .Task-Hover {
+    Border: 3px Dashed Var(--Light-Grey) !Important;
+  }
+  
+  .Task-Details {
+    Width: 24%;
+    Border-Left: 1px Solid #D9e0e9;
+    Display: Inline-Block;
+    Height: 100%;
+    Vertical-Align: Top;
+    Padding: 3rem 2rem;
+  }
+  
+  .Tag-Progress {
+    Margin: 1.5rem 0;
+  }
+  .Tag-Progress H2 {
+    Font-Size: 16px;
+    Margin-Bottom: 1rem;
+  }
+  .Tag-Progress P {
+    Display: Flex;
+    Width: 100%;
+    Justify-Content: Space-Between;
+  }
+  .Tag-Progress P Span {
+    Color: Rgb(180, 180, 180);
+  }
+  .Tag-Progress .Progress {
+    Width: 100%;
+    
+    Appearance: None;
+    Border: None;
+    Border-Radius: 10px;
+    Height: 10px;
+  }
+  .Tag-Progress .Progress::-Webkit-Progress-Bar, .Tag-Progress .Progress::-Webkit-Progress-Value {
+    Border-Radius: 10px;
+  }
+  .Tag-Progress .Progress--Copyright::-Webkit-Progress-Bar {
+    Background-Color: #Ecd8e6;
+  }
+  .Tag-Progress .Progress--Copyright::-Webkit-Progress-Value {
+    Background: #D459e8;
+  }
+  .Tag-Progress .Progress--Illustration::-Webkit-Progress-Bar {
+    Background-Color: #Dee7e3;
+  }
+  .Tag-Progress .Progress--Illustration::-Webkit-Progress-Value {
+    Background-Color: #46bd84;
+  }
+  .Tag-Progress .Progress--Design::-Webkit-Progress-Bar {
+    Background-Color: #D8e7f4;
+  }
+  .Tag-Progress .Progress--Design::-Webkit-Progress-Value {
+    Background-Color: #08a0f7;
+  }
+  
+  .Task-Activity H2 {
+    Font-Size: 16px;
+    Margin-Bottom: 1rem;
+  }
+  .Task-Activity Li {
+    List-Style: None;
+    Margin: 1rem 0;
+    Padding: 0rem 1rem 1rem 3rem;
+    Position: Relative;
+  }
+  .Task-Activity Time {
+    Display: Block;
+    Color: Var(--Light-Grey);
+  }
+  
+  .Task-Icon {
+    Width: 30px;
+    Height: 30px;
+    Border-Radius: 100rem;
+    Position: Absolute;
+    Top: 0;
+    Left: 0;
+    Display: Flex;
+    Align-Items: Center;
+    Justify-Content: Center;
+  }
+  .Task-Icon Svg {
+    Font-Size: 12px;
+    Color: Var(--White);
+  }
+  .Task-Icon--Attachment {
+    Background-Color: #da4224;
+  }
+  .Task-Icon--Comment {
+    Background-Color: #da4224;
+  }
+  .Task-Icon--Edit {
+    Background-Color: #da4224;
+  }
+  
+  @Media Only Screen And (Max-Width: 1300px) {
+    .Project {
+      Max-Width: 100%;
+    }
+    .Task-Details {
+      Width: 100%;
+      Display: Flex;
+    }
+    .Tag-Progress,
+  .Task-Activity {
+      Flex-Basis: 50%;
+      Background: Var(--White);
+      Padding: 1rem;
+      Border-Radius: 8px;
+      Margin: 1rem;
+    }
+  }
+  @Media Only Screen And (Max-Width: 1000px) {
+    .Project-Column:nth-Child(2),
+  .Project-Column:nth-Child(3) {
+      Display: None;
+    }
+    .Project-Tasks {
+      Grid-Template-Columns: 1fr 1fr;
+    }
+  }
+  @Media Only Screen And (Max-Width: 600px) {
+    .Project-Column:nth-Child(4) {
+      Display: None;
+    }
+    .Project-Tasks {
+      Grid-Template-Columns: 1fr;
+    }
+    .Task-Details {
+      Flex-Wrap: Wrap;
+      Padding: 3rem 1rem;
+    }
+    .Tag-Progress,
+  .Task-Activity {
+      Flex-Basis: 100%;
+    }
+    H1 {
+      Font-Size: 25px;
+    }
+  }
